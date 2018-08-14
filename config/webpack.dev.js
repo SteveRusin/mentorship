@@ -1,10 +1,11 @@
 var webpackMerge = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var webpack = require('webpack');
 
 module.exports = webpackMerge(commonConfig, {
+    mode: 'development',
     devtool: 'cheap-module-eval-source-map',
 
     output: {
@@ -20,7 +21,7 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     plugins: [
-        new ExtractTextPlugin('[name].css'),
+        new MiniCssExtractPlugin('[name].css'),
 
         new webpack.NamedModulesPlugin()
     ]

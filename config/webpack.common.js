@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var helpers = require('./helpers');
 
 module.exports = {
@@ -30,6 +30,14 @@ module.exports = {
                 exclude: [/node_modules/]
             },
             {
+                // Mark files inside `@angular/core` as using SystemJS style dynamic imports.
+                // Removing this will cause deprecation warnings to appear.
+                test: /[\/\\]@angular[\/\\]core[\/\\].+\.js$/,
+                parser: {
+                    system: true
+                },
+            },
+            {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
@@ -46,21 +54,32 @@ module.exports = {
                 loader: 'file-loader?name=assets/[name].[hash].[ext]'
             },
             {
-                test: /\.css$/,
-                exclude: helpers.root('src', 'app'),
-                loader: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: 'css-loader?sourceMap'
-                })
-            },
-            {
-                test: /\.css$/,
-                include: helpers.root('src', 'app'),
-                loader: 'raw-loader'
+                test: /\.(scss|sass)$/,
+                include: helpers.root('./src'),
+                use: [{
+                        loader: "raw-loader" // creates style nodes from JS strings
+                    },
+                    {
+                        loader: "sass-loader", // compiles Sass to CSS
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             }
         ]
     },
-
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendors",
+                    chunks: "all"
+                }
+            }
+        }
+    },
     plugins: [
         // Workaround for angular/angular#11580
         new webpack.ContextReplacementPlugin(
@@ -69,10 +88,6 @@ module.exports = {
             helpers.root('./src'), // location of your src
             {} // a map of your routes
         ),
-
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor', 'polyfills']
-        }),
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
