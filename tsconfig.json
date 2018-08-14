@@ -4,38 +4,30 @@
       "declaration": false,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
+      "lib": [
+        "es2015",
+        "dom"
+      ],
       "types": [
-        "core-js"
+        "core-js",
+        "node"
       ],
       "module": "es6",
       "moduleResolution": "node",
       "sourceMap": true,
       "target": "es5",
       "typeRoots": [
-        "./node_modules/@types"
+        "../node_modules/@types"
       ],
       "baseUrl": "./src",
       "paths": {
         "@app/models": [ "app/models" ],
-        "@app/services": [ "app/services" ],
+        "@app/services": [ "app/services" ]
       },
-      "noStrictGenericChecks": false,
       "allowJs": false,
-      "strict": true,
-      "strictPropertyInitialization": false,
-      "strictFunctionTypes":false,
+      "strict": false,
       "noUnusedParameters": true,
-      "noUnusedLocals": true
-    },
-    "include": [
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "node_modules",
-    ],
-    "compileOnSave": false,
-    "atom": {
-      "rewriteTsconfig": false
-    },
-    
+      "noUnusedLocals": true,
+      "skipLibCheck": true
+    }
   }

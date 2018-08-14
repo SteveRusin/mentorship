@@ -22,12 +22,6 @@ module.exports = webpackMerge(commonConfig, {
     plugins: [
         new ExtractTextPlugin('[name].css'),
 
-        new webpack.DefinePlugin({
-            'process.env': {
-                API_URL: JSON.stringify('http://localhost:5000/api/')
-            }
-        }),
-
         new webpack.NamedModulesPlugin()
     ]
 });

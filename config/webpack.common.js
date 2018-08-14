@@ -2,13 +2,12 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
-var isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
     entry: {
         polyfills: './src/polyfills.ts',
         vendor: './src/vendor.ts',
-        app: isProd ? './src/main.aot.ts' : './src/main.ts'
+        app: './src/main.ts'
     },
 
     resolve: {
@@ -23,9 +22,7 @@ module.exports = {
                     {
                         loader: 'awesome-typescript-loader',
                         options: {
-                            configFileName: isProd ?
-                                helpers.root('src', 'tsconfig-aot.json') :
-                                helpers.root('src', 'tsconfig.json')
+                            configFileName: helpers.root('./tsconfig.json')
                         }
                     },
                     'angular2-template-loader'
@@ -52,8 +49,8 @@ module.exports = {
                 test: /\.css$/,
                 exclude: helpers.root('src', 'app'),
                 loader: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style-loader',
-                    loader: 'css-loader?sourceMap'
+                    fallback: 'style-loader',
+                    use: 'css-loader?sourceMap'
                 })
             },
             {
@@ -68,7 +65,7 @@ module.exports = {
         // Workaround for angular/angular#11580
         new webpack.ContextReplacementPlugin(
             // The (\\|\/) piece accounts for path separators in *nix and Windows
-            /angular(\\|\/)core(\\|\/)@angular/,
+            /angular(\\|\/)core/,
             helpers.root('./src'), // location of your src
             {} // a map of your routes
         ),
