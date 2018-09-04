@@ -5,7 +5,7 @@
   "scripts": {
     "webpack-dev": "cross-env NODE_ENV=development webpack --progress",
     "webpack-prod": "cross-env NODE_ENV=production webpack --progress",
-    "serve": "webpack-dev-server --open --inline --hot --progress --watch --content-base src/ --port 4000"
+    "serve": "webpack-dev-server --open --watch"
   },
   "repository": {
     "type": "git",
@@ -51,6 +51,7 @@
     "rxjs": "^6.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "to-string-loader": "^1.1.5",
     "tslint": "^5.6.0",
     "tslint-loader": "^3.5.3",
     "typescript": "2.9.2",

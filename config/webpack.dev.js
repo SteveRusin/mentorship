@@ -17,12 +17,14 @@ module.exports = webpackMerge(commonConfig, {
 
     devServer: {
         historyApiFallback: true,
-        stats: 'minimal'
+        stats: 'minimal',
+        port: 8080,
+        contentBase: './',
+        noInfo: true,
+        quiet: true
     },
 
     plugins: [
-        new MiniCssExtractPlugin('[name].css'),
-
         new webpack.NamedModulesPlugin()
     ]
 });
