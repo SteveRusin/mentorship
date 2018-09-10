@@ -54,12 +54,13 @@ module.exports = {
         loader: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
+        test: /^(?!.*\.component\.local).+\.scss/,
+        loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+      {
         test: /\.local\.scss$/,
         loaders: ['to-string-loader', 'css-loader', 'sass-loader']
-      }, {
-        test: /^(?!.local\.scss$).\.scss$/,
-        loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      }
+      } 
     ]
   },
   optimization: {
@@ -74,7 +75,6 @@ module.exports = {
     }
   },
   plugins: [
-    new MiniCssExtractPlugin(),
     // Workaround for angular/angular#11580
     new webpack.ContextReplacementPlugin(
       // The (\\|\/) piece accounts for path separators in *nix and Windows
@@ -82,9 +82,10 @@ module.exports = {
       helpers.root('./src'), // location of your src
       {} // a map of your routes
     ),
-
+    
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new MiniCssExtractPlugin()
   ]
 };
