@@ -1,12 +1,10 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var helpers = require('./helpers');
 
 module.exports = {
   entry: {
-    polyfills: './src/polyfills.ts',
-    vendor: './src/vendor.ts',
     app: './src/main.ts'
   },
 
@@ -54,13 +52,13 @@ module.exports = {
         loader: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /^(?!.*\.component\.local).+\.scss/,
+        test: /^(?!.*\.local).+\.scss/,
         loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
         test: /\.local\.scss$/,
         loaders: ['to-string-loader', 'css-loader', 'sass-loader']
-      } 
+      }
     ]
   },
   optimization: {
@@ -68,8 +66,8 @@ module.exports = {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: "vendors",
-          chunks: "all"
+          name: 'vendors',
+          chunks: 'all'
         }
       }
     }
@@ -82,7 +80,7 @@ module.exports = {
       helpers.root('./src'), // location of your src
       {} // a map of your routes
     ),
-    
+
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),

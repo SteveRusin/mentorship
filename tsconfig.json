@@ -1,33 +1,33 @@
 {
-    "compilerOptions": {
-      "allowSyntheticDefaultImports": true,
-      "declaration": false,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "lib": [
-        "es2015",
-        "dom"
-      ],
-      "types": [
-        "core-js",
-        "node"
-      ],
-      "module": "es6",
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "target": "es5",
-      "typeRoots": [
-        "../node_modules/@types"
-      ],
-      "baseUrl": "./src",
-      "paths": {
-        "@app/models": [ "app/models" ],
-        "@app/services": [ "app/services" ]
-      },
-      "allowJs": false,
-      "strict": false,
-      "noUnusedParameters": true,
-      "noUnusedLocals": true,
-      "skipLibCheck": true
-    }
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "types": [
+      "core-js",
+      "node"
+    ],
+    "module": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@app/models": ["app/models"],
+      "@app/services": ["app/services"]
+    },
+    "allowJs": false,
+    "strict": false,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true
   }
+}
