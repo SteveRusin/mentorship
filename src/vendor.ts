@@ -1,10 +1,7 @@
-// Angular
-import '@angular/common';
-import '@angular/core';
-import '@angular/http';
-import '@angular/platform-browser';
-import '@angular/platform-browser-dynamic';
-import '@angular/router';
-import 'rxjs';
-
 // other stuff
+import 'rxjs';
+import 'reflect-metadata';
+import 'zone.js/dist/zone';
+
+// global style file
+import './styles.scss';

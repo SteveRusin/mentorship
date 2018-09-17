@@ -1,70 +1,69 @@
 {
-    "rules": {
-      "no-duplicate-variable": true,
-      "no-unused-variable": [
-        true,
-        "check-parameters"
-      ],
-      "strict-type-predicates": true,
-      "variable-name": true,
-      "arrow-return-shorthand": true,
-      "class-name": true,
-      "curly": true,
-      "eofline": true,
-      "forin": true,
-      "import-spacing": true,
-      "interface-name": true,
-      "member-access": true,
-      "no-boolean-literal-compare": true,
-      "no-construct": true,
-      "no-duplicate-super": true,
-      "no-empty": true,
-      "no-empty-interface": true,
-      "no-void-expression": true,
-      "no-var-keyword": true,
-      "no-eval": true,
-      "no-import-side-effect": true,
-      "no-misused-new": true,
-      "no-duplicate-switch-case": true,
-      "no-return-await": true,
-      "no-this-assignment": true,
-      "switch-default": true,
-      "use-isnan": true,
-      "newline-before-return": true,
-      "no-consecutive-blank-lines": true,
-      "no-irregular-whitespace": true,
-      "no-trailing-whitespace": [
-        true,
-        "ignore-blank-lines"
-      ],
-      "number-literal-format": true,
-      "semicolon": true,
-      "whitespace": true,
-      "type-literal-delimiter": true,
-      "typedef-whitespace": true,
-      "typedef": [
-        true,
-        "call-signature",
-        "property-declaration",
-        "arrow-call-signature",
-        "parameter",
-        "arrow-parameter",
-        "array-destructuring",
-        "object-destructuring",
-        "member-variable-declaration",
-        "variable-declaration"
-      ],
-      "no-unused-expression": true,
-      "newline-per-chained-call": true,
-      "no-unnecessary-callback-wrapper": true,
-      "one-line": true,
-      "one-variable-per-declaration": true,
-      "prefer-const": true,
-      "restrict-plus-operands": true,
-      "triple-equals": true
-    },
-    "rulesDirectory": [
-      "node_modules/tslint-eslint-rules/dist/rules"
-    ]
-  }
-  
+  "rules": {
+    "no-duplicate-variable": true,
+    "no-unused-variable": [
+      true,
+      "check-parameters"
+    ],
+    "strict-type-predicates": true,
+    "variable-name": true,
+    "arrow-return-shorthand": true,
+    "class-name": true,
+    "curly": true,
+    "eofline": true,
+    "forin": true,
+    "import-spacing": true,
+    "interface-name": true,
+    "member-access": true,
+    "no-boolean-literal-compare": true,
+    "no-construct": true,
+    "no-duplicate-super": true,
+    "no-empty": true,
+    "no-empty-interface": true,
+    "no-void-expression": true,
+    "no-var-keyword": true,
+    "no-eval": true,
+    "no-import-side-effect": true,
+    "no-misused-new": true,
+    "no-duplicate-switch-case": true,
+    "no-return-await": true,
+    "no-this-assignment": true,
+    "switch-default": true,
+    "use-isnan": true,
+    "newline-before-return": true,
+    "no-consecutive-blank-lines": true,
+    "no-irregular-whitespace": true,
+    "no-trailing-whitespace": [
+      true,
+      "ignore-blank-lines"
+    ],
+    "number-literal-format": true,
+    "semicolon": true,
+    "whitespace": true,
+    "type-literal-delimiter": true,
+    "typedef-whitespace": true,
+    "typedef": [
+      true,
+      "call-signature",
+      "property-declaration",
+      "arrow-call-signature",
+      "parameter",
+      "arrow-parameter",
+      "array-destructuring",
+      "object-destructuring",
+      "member-variable-declaration",
+      "variable-declaration"
+    ],
+    "no-unused-expression": true,
+    "newline-per-chained-call": true,
+    "no-unnecessary-callback-wrapper": true,
+    "one-line": true,
+    "one-variable-per-declaration": true,
+    "prefer-const": true,
+    "restrict-plus-operands": true,
+    "triple-equals": true
+  },
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ]
+}

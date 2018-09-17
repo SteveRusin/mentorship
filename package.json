@@ -5,7 +5,7 @@
   "scripts": {
     "webpack-dev": "cross-env NODE_ENV=development webpack --progress",
     "webpack-prod": "cross-env NODE_ENV=production webpack --progress",
-    "serve": "webpack-dev-server --open --inline --hot --progress --watch --content-base src/ --port 4000"
+    "serve": "webpack-dev-server --open --watch"
   },
   "repository": {
     "type": "git",
@@ -18,21 +18,21 @@
   },
   "homepage": "https://github.com/SteveRusin/mentorship#readme",
   "dependencies": {
-    "@angular/common": "6.1.2",
-    "@angular/compiler": "6.1.2",
-    "@angular/compiler-cli": "6.1.2",
-    "@angular/core": "6.1.2",
-    "@angular/forms": "6.1.2",
-    "@angular/http": "6.1.2",
-    "@angular/platform-browser": "6.1.2",
-    "@angular/platform-browser-dynamic": "6.1.2",
-    "@angular/platform-server": "6.1.2",
-    "@angular/router": "6.1.2",
-    "core-js": "^2.4.1",
+    "@angular/common": "^6.1.2",
+    "@angular/compiler": "^6.1.2",
+    "@angular/compiler-cli": "^6.1.2",
+    "@angular/core": "^6.1.2",
+    "@angular/forms": "^6.1.2",
+    "@angular/http": "^6.1.2",
+    "@angular/platform-browser": "^6.1.2",
+    "@angular/platform-browser-dynamic": "^6.1.2",
+    "@angular/platform-server": "^6.1.2",
+    "@angular/router": "^6.1.2",
+    "core-js": "^2.5.7",
     "es6-shim": "^0.35.3",
-    "reflect-metadata": "0.1.12",
-    "ts-loader": "^4.4.2",
-    "zone.js": "^0.8.4"
+    "reflect-metadata": "^0.1.12",
+    "ts-loader": "^4.5.0",
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.43",
@@ -51,10 +51,12 @@
     "rxjs": "^6.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "to-string-loader": "^1.1.5",
     "tslint": "^5.6.0",
     "tslint-loader": "^3.5.3",
     "typescript": "2.9.2",
     "webpack": "4.16.5",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "3.1.5",
     "webpack-merge": "^4.1.4"
