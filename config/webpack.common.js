@@ -9,7 +9,10 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js'],
+    alias: {
+      '@app/common': helpers.root('./src/app/common')
+    }
   },
 
   module: {
