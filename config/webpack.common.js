@@ -52,7 +52,7 @@ module.exports = {
         loader: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /^(?!.*\.local).+\.scss/,
+        test: /^(?!.*\.(local|global)).+\.scss/,
         loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
