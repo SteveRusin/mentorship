@@ -2,8 +2,7 @@
   "rules": {
     "no-duplicate-variable": true,
     "no-unused-variable": [
-      true,
-      "check-parameters"
+      true
     ],
     "strict-type-predicates": true,
     "variable-name": true,
@@ -42,6 +41,7 @@
     "whitespace": true,
     "type-literal-delimiter": true,
     "typedef-whitespace": true,
+    "newline-per-chained-call": true,
     "typedef": [
       true,
       "call-signature",
@@ -53,15 +53,7 @@
       "object-destructuring",
       "member-variable-declaration",
       "variable-declaration"
-    ],
-    "no-unused-expression": true,
-    "newline-per-chained-call": true,
-    "no-unnecessary-callback-wrapper": true,
-    "one-line": true,
-    "one-variable-per-declaration": true,
-    "prefer-const": true,
-    "restrict-plus-operands": true,
-    "triple-equals": true
+    ]
   },
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules"

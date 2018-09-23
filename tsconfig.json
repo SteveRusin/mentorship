@@ -22,12 +22,12 @@
     "baseUrl": "./src",
     "paths": {
       "@app/common": ["app/common"],
+      "@app/core": ["app/core"],
     },
-    "noStrictGenericChecks": false,
+    "noStrictGenericChecks": true,
     "allowJs": false,
     "strict": true,
     "strictPropertyInitialization": false,
-    "strictFunctionTypes":false,
     "noUnusedParameters": true,
     "noUnusedLocals": true
   }

@@ -11,7 +11,8 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
     alias: {
-      '@app/common': helpers.root('./src/app/common')
+      '@app/common': helpers.root('./src/app/common'),
+      '@app/core': helpers.root('./src/app/core'),
     }
   },
 
