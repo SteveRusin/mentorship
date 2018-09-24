@@ -1,14 +1,12 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ContentChild } from '@angular/core';
 
+import { CustomInputDirective } from '../custom-input-directive/custom-input.directive';
 @Component({
   selector: 'input-field',
   templateUrl: './input-field.component.html',
   styleUrls: ['./input-field.local.scss']
 })
-export class InputFieldComponent implements AfterViewInit {
-  @ViewChild('input') public input: any;
+export class InputFieldComponent  {
+  @ContentChild(CustomInputDirective) public customInput: CustomInputDirective;
 
-  public ngAfterViewInit(): void {
-    console.log(this.input);
-  }
 }
