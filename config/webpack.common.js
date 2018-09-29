@@ -9,7 +9,11 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js'],
+    alias: {
+      '@app/common': helpers.root('./src/app/common'),
+      '@app/core': helpers.root('./src/app/core'),
+    }
   },
 
   module: {
@@ -52,7 +56,7 @@ module.exports = {
         loader: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /^(?!.*\.local).+\.scss/,
+        test: /^(?!.*\.(local|global)).+\.scss/,
         loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {

@@ -21,13 +21,14 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "@app/models": ["app/models"],
-      "@app/services": ["app/services"]
+      "@app/common": ["app/common"],
+      "@app/core": ["app/core"],
     },
+    "noStrictGenericChecks": true,
     "allowJs": false,
-    "strict": false,
+    "strict": true,
+    "strictPropertyInitialization": false,
     "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "skipLibCheck": true
+    "noUnusedLocals": true
   }
 }

@@ -1,3 +1,22 @@
-.title {
-  color: blueviolet !important;
+@import './utils/_css-variables';
+@import './utils/_key-frames.scss';
+/* ask how to use ~ */
+@import './app/common/input-field-component/input-field.global.scss';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+html,
+.main-wrapper {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, rgb(238, 255, 0), rgb(0, 255, 157), rgb(0, 81, 255))
 }
