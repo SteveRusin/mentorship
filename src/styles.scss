@@ -1,5 +1,7 @@
 @import './utils/_css-variables';
 @import './utils/_key-frames.scss';
+/* ask how to use ~ */
+@import './app/common/input-field-component/input-field.global.scss';
 
 *,
 *:before,
@@ -7,7 +9,9 @@
   box-sizing: border-box;
 }
 
-body, html, .main-wrapper {
+body,
+html,
+.main-wrapper {
   height: 100%;
 }
 

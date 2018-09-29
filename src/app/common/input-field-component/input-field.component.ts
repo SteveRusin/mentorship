@@ -6,7 +6,6 @@ import { CustomInputDirective } from '../custom-input-directive/custom-input.dir
   templateUrl: './input-field.component.html',
   styleUrls: ['./input-field.local.scss']
 })
-export class InputFieldComponent  {
+export class InputFieldComponent {
   @ContentChild(CustomInputDirective) public customInput: CustomInputDirective;
-
 }

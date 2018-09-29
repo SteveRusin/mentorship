@@ -1,5 +1,6 @@
 import { Directive, Input } from '@angular/core';
 
+/* ask why host is for */
 @Directive({
   selector: '[customInput]',
   host: {
@@ -9,5 +10,4 @@ import { Directive, Input } from '@angular/core';
 })
 export class CustomInputDirective {
   @Input() public placeholder: string;
-
 }

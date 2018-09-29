@@ -19,5 +19,4 @@ export class UploadPageComponent implements OnInit {
   public submitForm():void {
     console.log(this.uploadForm.value);
   }
-
 }
