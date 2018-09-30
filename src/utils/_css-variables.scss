@@ -1,0 +1,11 @@
+:root {
+  /* colors */
+  --soft-blue: rgba(0, 111, 238, 0.774);
+  --blue: rgb(3, 13, 153);
+
+  /* end colors */
+
+  --transition-time: 0.4s;
+  --transition-cubic: cubic-bezier(0, 0.36, 1, 1.32);
+  --input-line: var(--soft-blue);
+}
