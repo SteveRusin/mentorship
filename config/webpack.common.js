@@ -21,6 +21,7 @@ module.exports = {
         test: /\.ts$/,
         loaders: [
           'babel-loader',
+          'ng-router-loader',
           {
             loader: 'awesome-typescript-loader',
             options: {

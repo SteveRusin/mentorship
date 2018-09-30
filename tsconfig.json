@@ -22,7 +22,7 @@
     "baseUrl": "./src",
     "paths": {
       "@app/common": ["app/common"],
-      "@app/core": ["app/core"],
+      "@app/core": ["app/core"]
     },
     "noStrictGenericChecks": true,
     "allowJs": false,

@@ -1,22 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { UploadPageComponent } from './upload-page.component';
 import { AppCommonModule } from '@app/common';
-import { ReactiveFormsModule } from '@angular/forms';
-import { CoreRoutingModule } from './core-routing.module';
-// doesn't work. Why?
-// import { HomePageModule } from '@app/core';
 @NgModule({
   declarations: [
-
+    UploadPageComponent
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule,
-    ReactiveFormsModule,
     AppCommonModule
   ],
   exports: [
+    UploadPageComponent
   ],
   providers: [],
 })
-export class CoreModule { }
+export class UploadPageModule { }
