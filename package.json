@@ -5,7 +5,8 @@
   "scripts": {
     "webpack-dev": "cross-env NODE_ENV=development webpack --progress",
     "webpack-prod": "cross-env NODE_ENV=production webpack --progress",
-    "serve": "webpack-dev-server --open --watch"
+    "serve": "webpack-dev-server --open --watch",
+    "start": "npm run serve"
   },
   "repository": {
     "type": "git",

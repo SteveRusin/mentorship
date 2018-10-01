@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
-import { UploadPageComponent } from './upload-page.component';
 import { AppCommonModule } from '@app/common';
+import { components, routes } from './upload-page-routing.module';
 @NgModule({
-  declarations: [
-    UploadPageComponent
-  ],
   imports: [
     CommonModule,
+    RouterModule.forChild(routes),
     AppCommonModule
   ],
-  exports: [
-    UploadPageComponent
+  declarations: [
+    components
   ],
-  providers: [],
+  exports: [
+    components
+  ]
 })
 export class UploadPageModule { }
