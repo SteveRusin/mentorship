@@ -7,9 +7,9 @@ export const routes: Routes = [
     redirectTo: 'home'
   }, {
     path: 'home',
-    loadChildren: '@app/pages#HomePageModule'
+    loadChildren: './pages/home-page/home-page.module#HomePageModule'
   }, {
     path: 'upload',
-    loadChildren: '@app/pages#UploadPageModule'
+    loadChildren: './pages/upload-page/upload-page.module#UploadPageModule'
   }
 ];

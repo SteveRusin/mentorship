@@ -11,10 +11,10 @@ import { components, routes } from './upload-page-routing.module';
     AppCommonModule
   ],
   declarations: [
-    components
+    ...components
   ],
   exports: [
-    components
+    ...components
   ]
 })
 export class UploadPageModule { }
