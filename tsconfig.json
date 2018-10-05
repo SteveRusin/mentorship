@@ -23,6 +23,7 @@
     "paths": {
       "@app/common": ["app/common"],
       "@app/core": ["app/core"],
+      "@app/pages": ["app/pages"]
     },
     "noStrictGenericChecks": true,
     "allowJs": false,

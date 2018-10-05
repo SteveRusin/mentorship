@@ -1,6 +1,5 @@
 import { Directive, Input } from '@angular/core';
 
-/* ask why host is for */
 @Directive({
   selector: '[customInput]',
   host: {

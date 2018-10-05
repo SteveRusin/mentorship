@@ -3,11 +3,9 @@ import { CommonModule } from '@angular/common';
 import { AppCommonModule } from '@app/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { UploadPageComponent } from './upload-page/';
-
 @NgModule({
   declarations: [
-    UploadPageComponent
+
   ],
   imports: [
     CommonModule,
@@ -15,7 +13,6 @@ import { UploadPageComponent } from './upload-page/';
     AppCommonModule
   ],
   exports: [
-    UploadPageComponent
   ],
   providers: [],
 })
