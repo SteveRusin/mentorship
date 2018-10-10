@@ -7,9 +7,9 @@ import { Location } from '@angular/common';
   styleUrls: ['./admin-page.local.scss']
 })
 export class AdminPageComponent {
-  constructor(private location: Location) { }
-
+  constructor(private _location: Location) { }
+  
   goBack() {
-    this.location.back();
+    this._location.back();
   }
 }

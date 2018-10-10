@@ -6,13 +6,13 @@ import { delay } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AdminService {
-  public isAdmin = false;
+  isAdmin = false;
 
-  public toggleAdminRights(): void {
+  toggleAdminRights(): void {
     this.isAdmin = !this.isAdmin;
   }
 
-  public checkAdmin(): Observable<boolean> {
+  checkAdmin(): Observable<boolean> {
     return of(this.isAdmin).pipe(
       delay(1000)
     )

@@ -7,13 +7,13 @@ import { AdminService } from '@app/services';
 })
 export class HomePageComponent {
 
-  constructor(private adminService: AdminService) { }
+  constructor(private _adminService: AdminService) { }
 
-  public isAdmin(): boolean {
-    return this.adminService.isAdmin;
+  isAdmin(): boolean {
+    return this._adminService.isAdmin;
   }
 
-  public toggleAdmin(): void {
-    this.adminService.toggleAdminRights();
+  toggleAdmin(): void {
+    this._adminService.toggleAdminRights();
   }
 }

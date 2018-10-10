@@ -7,5 +7,5 @@ import { CustomInputDirective } from '../custom-input-directive/custom-input.dir
   styleUrls: ['./input-field.local.scss']
 })
 export class InputFieldComponent {
-  @ContentChild(CustomInputDirective) public customInput: CustomInputDirective;
+  @ContentChild(CustomInputDirective)  customInput: CustomInputDirective;
 }

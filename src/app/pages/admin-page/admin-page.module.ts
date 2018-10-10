@@ -9,11 +9,7 @@ import { components, routes } from './admin-page-routing.module';
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [
-    ...components
-  ],
-  exports: [
-    ...components
-  ]
+  declarations: components,
+  exports: components
 })
 export class AdminPageModule { }

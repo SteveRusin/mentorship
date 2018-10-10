@@ -7,8 +7,8 @@ import { AdminService } from '@app/services';
   providedIn: 'root'
 })
 export class CanActivateGuard implements CanActivate {
-  constructor(private adminService: AdminService) { }
+  constructor(private _adminService: AdminService) { }
   canActivate(): Observable<boolean> {
-    return this.adminService.checkAdmin();
+    return this._adminService.checkAdmin();
   }
 }
