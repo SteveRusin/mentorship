@@ -23,7 +23,9 @@
     "paths": {
       "@app/common": ["app/common"],
       "@app/core": ["app/core"],
-      "@app/pages": ["app/pages"]
+      "@app/pages": ["app/pages"],
+      "@app/guards": ["app/guards"],
+      "@app/services": ["app/services"],
     },
     "noStrictGenericChecks": true,
     "allowJs": false,

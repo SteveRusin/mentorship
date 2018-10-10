@@ -13,7 +13,9 @@ module.exports = {
     alias: {
       '@app/common': helpers.root('./src/app/common'),
       '@app/core': helpers.root('./src/app/core'),
-      '@app/pages': helpers.root('./src/app/pages')
+      '@app/pages': helpers.root('./src/app/pages'),
+      '@app/guards': helpers.root('./src/app/guards'),
+      '@app/services': helpers.root('./src/app/services')
     }
   },
 

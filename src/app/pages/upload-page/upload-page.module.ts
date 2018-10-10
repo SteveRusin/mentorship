@@ -10,11 +10,7 @@ import { components, routes } from './upload-page-routing.module';
     RouterModule.forChild(routes),
     AppCommonModule
   ],
-  declarations: [
-    ...components
-  ],
-  exports: [
-    ...components
-  ]
+  declarations: components,
+  exports: components
 })
 export class UploadPageModule { }
