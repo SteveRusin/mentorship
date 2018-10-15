@@ -5,7 +5,10 @@ export const routes: Routes = [
   {
     path: '',
     component: AdminPageComponent,
-    canActivate: [CanActivateGuard]
+    canActivate: [CanActivateGuard],
+    data: {
+      animation: 'AdminPage'
+    }
   }
 ];
 
