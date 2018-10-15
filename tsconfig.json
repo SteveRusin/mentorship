@@ -26,6 +26,7 @@
       "@app/pages": ["app/pages"],
       "@app/guards": ["app/guards"],
       "@app/services": ["app/services"],
+      "@app/animations": ["app/animations"]
     },
     "noStrictGenericChecks": true,
     "allowJs": false,
