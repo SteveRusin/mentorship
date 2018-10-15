@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { components, routes } from './home-page-routing.module';
+import { components, routes } from './admin-page-routing.module';
 
 @NgModule({
   imports: [
@@ -12,4 +12,4 @@ import { components, routes } from './home-page-routing.module';
   declarations: components,
   exports: components
 })
-export class HomePageModule { }
+export class AdminPageModule { }

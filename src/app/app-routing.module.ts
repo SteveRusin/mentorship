@@ -11,5 +11,8 @@ export const routes: Routes = [
   }, {
     path: 'upload',
     loadChildren: './pages/upload-page/upload-page.module#UploadPageModule'
+  }, {
+    path: 'admin',
+    loadChildren: './pages/admin-page/admin-page.module#AdminPageModule'
   }
 ];

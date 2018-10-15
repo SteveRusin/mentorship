@@ -7,16 +7,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./upload-page.local.scss']
 })
 export class UploadPageComponent implements OnInit {
-  constructor(private formBuilder: FormBuilder) { }
-  public uploadForm: FormGroup;
+  constructor(private _formBuilder: FormBuilder) { }
+   uploadForm: FormGroup;
 
-  public ngOnInit(): void {
-    this.uploadForm = this.formBuilder.group({
+   ngOnInit(): void {
+    this.uploadForm = this._formBuilder.group({
       name: ['']
     });
   }
 
-  public submitForm():void {
+   submitForm():void {
     console.log(this.uploadForm.value);
   }
 }

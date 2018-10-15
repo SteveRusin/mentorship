@@ -1,2 +1,7 @@
 <p>Home page works</p>
 <button routerLink='/upload'>go to upload</button>
+<button routerLink='/admin'>Administrator page</button>
+<button (click)="toggleAdmin()">
+  <span *ngIf="!isAdmin()">grand admin rights</span>
+  <span *ngIf="isAdmin()">remove admin rights</span>
+</button>

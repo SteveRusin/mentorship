@@ -8,5 +8,5 @@ import { Directive, Input } from '@angular/core';
   }
 })
 export class CustomInputDirective {
-  @Input() public placeholder: string;
+  @Input() placeholder: string;
 }
